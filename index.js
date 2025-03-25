@@ -1,7 +1,7 @@
 'use strict';
 
-import create from './create';
+const create = require('./create')
 
 var { id, random, time, iterator } = create('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz');
 
-export { create, id, random, time, iterator };
+module.exports = { create, id, random, time, iterator };

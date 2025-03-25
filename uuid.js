@@ -1,10 +1,8 @@
-'use strict';
+const create = require("./create");
 
-import create from './create';
+const x = create("0123456789abcdef").random;
+const y = create("89abcdef").random;
 
-var x = create('0123456789abcdef').random;
-var y = create('89abcdef').random;
-
-export default function uuid() {
-  return [ x(8), x(4), '4' + x(3), y(1) + x(3), x(12) ].join('-') ;
-}
+module.exports = function uuid() {
+  return [x(8), x(4), "4" + x(3), y(1) + x(3), x(12)].join("-");
+};
