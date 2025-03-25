@@ -1,6 +1,5 @@
 'use strict';
 
-import now from 'microseconds/now';
 import createIterator from 'es6-util/iterator/create';
 
 export default function create(chars) {
@@ -17,7 +16,7 @@ export default function create(chars) {
     return string;
   };
 
-  var time = () => id(now());
+  var time = () => id(process.hrtime());
 
   var next = () => {
     var i = 0;
