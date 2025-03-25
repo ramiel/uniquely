@@ -1,6 +1,7 @@
 'use strict';
 
 import createIterator from 'es6-util/iterator/create';
+import { hrtime } from 'node:process';
 
 export default function create(chars) {
 
@@ -16,7 +17,7 @@ export default function create(chars) {
     return string;
   };
 
-  var time = () => id(process.hrtime());
+  var time = () => id(hrtime());
 
   var next = () => {
     var i = 0;
