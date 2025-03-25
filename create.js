@@ -1,5 +1,5 @@
 const createIterator = require("es6-util/iterator/create");
-const { hrtime } = require("node:process");
+const { hrtime } = require("process");
 
 module.exports = function create(chars) {
   const length = chars.length;
